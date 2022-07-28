@@ -95,6 +95,26 @@
         padding: civictheme-space(1.25) civictheme-space(0.25);
       }
     }
+
+    &:not([data-mobile-menu]) {
+      display: none;
+
+      @include civictheme-breakpoint('m') {
+        display: block;
+      }
+    }
+
+    &[data-mobile-menu] {
+      display: none;
+    }
+
+    &[data-mobile-menu-active] {
+      display: block;
+
+      @include civictheme-breakpoint('m') {
+        display: none;
+      }
+    }
   }
 
   &.civictheme-theme-light {
